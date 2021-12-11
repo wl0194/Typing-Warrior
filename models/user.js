@@ -1,4 +1,5 @@
 const { Sequelize } = require("sequelize/dist");
+const bcrypt = require('bcrypt');
 
 // set up User table
 const User = sequalize.define('users', {
@@ -10,7 +11,7 @@ const User = sequalize.define('users', {
         autoIncrement: true
     },
     username: {
-        type: Sequalize.STRING,
+        type: Sequelize.STRING,
         unique: true,
         allowNull: false
     },
@@ -21,7 +22,9 @@ const User = sequalize.define('users', {
 });
 
 User.beforeCreate((user, options) => {
-    const salt = bcryt.genSaltSync();
+    // This doesn't allow a user to crack/calculate other users passwords
+    const salt = bcrypt.genSaltSync();
     user.password = bcryt.hashSync(user.password, salt);
 });
-    
+
+module.exports = User;
