@@ -17,6 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
+
 // Create batabase connection:
 
 sequelize.sync({ force: false }).then(() => {
