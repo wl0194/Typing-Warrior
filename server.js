@@ -7,12 +7,15 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const sequelize = require("./config/connection");
+const router = require("./controllers");
 
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 // express middlewar:
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use(router)
 
 // Create batabase connection:
 
