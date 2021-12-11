@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS warrior_db;
-CREATE DATABASE warrior_db;
+DROP DATABASE IF EXISTS typing_db;
+CREATE DATABASE typing_db;
