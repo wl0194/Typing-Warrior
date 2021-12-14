@@ -2,7 +2,7 @@ const { Sequelize } = require("sequelize/dist");
 const bcrypt = require('bcrypt');
 
 // set up User table
-const User = sequalize.define('users', {
+const User = sequelize.define('users', {
     id: {
         type: Sequelize.INTERGER,
         unique: true,
