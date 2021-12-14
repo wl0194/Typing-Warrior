@@ -11,6 +11,14 @@ router.get('/', withAuth, async (req, res) => {
 
     const users = userData.map((project) => project.get({ plain: true }));
 
+router.get('/login', async (req,res) =>{
+    if (req.session.logged_in) {
+        res.redirect('/homepage');
+        return;
+    }
+    res.render('login');
+});
+
     res.render('homepage', {
       users,
       logged_in: req.session.logged_in,
