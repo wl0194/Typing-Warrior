@@ -2,6 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 
+
 // // set up User table
 class User extends Model {}
 // const User = sequalize.define('users', {
