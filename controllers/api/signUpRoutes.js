@@ -1,10 +1,10 @@
-const router = require('express').Router();
-const User  = require('../../models/User');
+// const router = require('express').Router();
+// const User  = require('../../models/User');
 
 
-router.get('/',  (req, res)=>{
-    res.json('test sign up Routes')
-});
+// router.get('/',  (req, res)=>{
+//     res.send('<h1>test sign up Routes...<h1>')
+// });
 
-module.exports = router;
+// module.exports = router;
  
