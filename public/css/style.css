@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
    
 @import url('https://fonts.googleapis.com/css?family=Lato');
@@ -304,7 +303,6 @@ label {
   .form-wrap.login-form {
     width: 100%;
   }
-=======
 * {margin: 0; padding: 0; box-sizing: border-box;}
 body {
     display: flex;
@@ -313,5 +311,4 @@ body {
     height: 100vh;
     background: url("bg.jpeg") no-repeat center;
     background-size: cover;
->>>>>>> 0909620512f02de3a6ed90804bfb65d65479b378
 }
