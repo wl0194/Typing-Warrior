@@ -1,4 +1,4 @@
-//  Rout for signe up page:
+//  Route for sign up page:
 const router = require('express').Router();
 const { User } = require('../../models');
 
