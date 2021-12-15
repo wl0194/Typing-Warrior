@@ -1,0 +1,104 @@
+* {
+    font-family: Roboto;
+    text-transform: uppercase;
+}
+
+html {
+    margin: 0;
+    padding:0;
+}
+
+body {
+    background-color: #E3E3E3;
+}
+
+/* Welcome Headding */
+.welcome-head {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-top: 40px; 
+    font-size: 30px;
+}
+
+.all-stats {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 140px;
+    max-width: 1600px;
+    border-radius: 3px;
+    margin: 0 auto;
+    padding-top: 15px; 
+    background-image: url("./img/bkg-png.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.stat-block {
+    display: flex;
+    flex-direction: row;
+    justify-self:center;
+    align-self:center;
+    align-items:space-around;
+}
+
+/* Test Section */
+
+.test-section{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.typing-box{
+    width: 95%;
+    max-width: 930px;
+    height: 360px;
+}
+
+.active-box{
+    display: flex;
+    flex-direction: column;
+    width: 570px;
+    height:360px;
+    background-color: #262626;
+    color: white;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.active-stats-head{
+    width: 100%;
+    border-radius: 5px;
+    background-size: cover;
+    background-image: url("./img/bkg-png2.png");
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.active-stats-body{
+    list-style-type: none;
+}
+
+/* TRACK YOUR STATS */
+
+.track-head {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-top: 40px; 
+    font-size: 30px;
+}
