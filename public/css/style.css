@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url("bg.jpeg") no-repeat center;
+    background: url("/Assets/bg.jpeg") no-repeat center;
     background-size: cover;
 }
 h2 {
