@@ -1,11 +1,29 @@
 //  Route for sign up page:
 const router = require('express').Router();
-// const { User } = require('../../models');
+const { User } = require('../../models');
 
+<<<<<<< HEAD
+=======
+  
+router.post('/', async (req, res) => {
+  try {
+    const userData = await User.create(req.body);
+
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.loggedIn = true;
+
+      res.status(200).json(userData);
+    });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+>>>>>>> 7921b5690c44adedb5a0b5c30202a6e0b10e40ed
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
-
     if (!userData) {
       res
         .status(400)
@@ -24,7 +42,7 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = userData.id;
-      req.session.logged_in = true;
+      req.session.loggedIn = true;
       
       res.json({ user: userData, message: 'You are now logged in!' });
     });
@@ -35,7 +53,7 @@ router.post('/login', async (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
     });
