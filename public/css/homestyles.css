@@ -23,6 +23,15 @@ body {
     font-size: 30px;
 }
 
+.logout-section {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
 .all-stats {
     display: flex;
     align-items: center;
