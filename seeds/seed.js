@@ -1,7 +1,8 @@
 const sequelize = require("../config/connection");
-const { Quote } = require("../models");
+const { Quote , User } = require("../models");
 
 const quoteData = require("./quoteData.json");
+const userData = require("./userData.json");
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -10,7 +11,11 @@ const seedDatabase = async () => {
       ...quote,
     });
   }
-
+  for (const user of userData) {
+    await User.create({
+      ...user,
+    });
+  }
   process.exit(0);
 };
 

@@ -6,21 +6,27 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url("/Assets/bg.jpeg") no-repeat center;
+    background: url("../assets/bg.jpeg") no-repeat center;
     background-size: cover;
 }
 .hero::before {
     content:"";
     position: absolute; z-index: 1;
     top: 0; right: 0; bottom: 0; left: 0;
-    background-color: rgba(80, 80, 80, 0.3);
+    background-color: rgba(80, 80, 80, 0.1);
 }
 .login-form {
     position: relative; z-index: 2;
 }
 .login-form h1 {
     font-size: 32px;
-    color: rgb(0, 0, 0);
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.login-form h3 {
+    font-size: 32px;
+    color: #FFF;
     text-align: center;
     margin-bottom: 60px;
 }
