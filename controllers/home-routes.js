@@ -12,6 +12,7 @@ router.get('/', withAuth, async (req, res) => {
   
       res.render('homepage', {
         users,
+        homepage: true,
         loggedIn: req.session.loggedIn,
       });
     } catch (err) {
@@ -21,7 +22,7 @@ router.get('/', withAuth, async (req, res) => {
   
   router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
-      res.redirect('/homepage');
+      res.redirect('/');
       return;
     }
   
@@ -31,7 +32,7 @@ router.get('/', withAuth, async (req, res) => {
     
   router.get('/signup', (req, res) => {
     if (req.session.loggedIn) {
-      res.redirect('/homepage');
+      res.redirect('/');
       return;
     }
   
