@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-  
+// url at this point = POST at /api/users
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -13,8 +13,15 @@ router.post('/', async (req, res) => {
       res.status(200).json(userData);
     });
   } catch (err) {
-    res.status(400).json(err);
-  }
+    console.log(err.errors[0].message);
+    if (err.errors[0].message === "Validation isEmail on email failed") {
+      res.status(400).json({message:"Your email should be a valid email."})
+    } else if (err.errors[0].message === "Validation len on password failed") {
+      res.status(400).json({message:"Your password should be at least 8 characters."})
+    } else {
+      res.status(400).json(err.errors[0])
+    }
+  };
 });
 
 router.post('/login', async (req, res) => {
@@ -40,7 +47,7 @@ router.post('/login', async (req, res) => {
       req.session.user_id = userData.id;
       req.session.loggedIn = true;
       req.session.email = req.body.email;
-      
+
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 
