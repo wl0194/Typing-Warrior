@@ -13,13 +13,15 @@ const signupFormHandler = async (event) => {
   
       if (response.ok) {
         document.location.replace('/dashboard');
-      } else {
-        alert(response.statusText);
-      }
+      } else { 
+        const data = await response.json();
+        console.log(data.message)
+        alert (data.message);
+      } 
     }
   };
 
 
 document
-.querySelector('.signup-form')
+.querySelector('#signup-form')
 .addEventListener('submit', signupFormHandler);
