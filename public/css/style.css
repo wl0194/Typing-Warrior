@@ -106,13 +106,14 @@
     font-size: 19px;
     text-decoration: none;
 }
-
-.btn {
+a.btn {
+    color: #FFF !important;
+}
+.button {
+    z-index:2;
     margin:40px;
     font-size: 20px;
-    color:#FFF;
-    background-color: black;
-    opacity: 0.7;
+    background-color: rgba(0, 0 , 0, 0.5);
     border: none;
     cursor: pointer;
     transition: 0.8s;
