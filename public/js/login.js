@@ -14,14 +14,17 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      // If successful, redirect the browser to the profile page
-      document.location.replace('/profile');
-    } else {
-      alert(response.statusText);
+      // If successful, redirect the browser to the dashboard page
+      document.location.replace('/dashboard');
+    } else { 
+      const data = await response.json();
+      console.log(data.message)
+      alert (data.message);
     }
   }
 };
 
+<<<<<<< HEAD
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
@@ -43,11 +46,10 @@ const signupFormHandler = async (event) => {
     }
   }
 };
+=======
+>>>>>>> e5e2b5940b5c11b2d3f429c5bbd1a5df64ce95f9
 
 document
-  .querySelector('.login-form')
+  .querySelector('#login-form')
   .addEventListener('submit', loginFormHandler);
 
-document
-  .querySelector('.signup-form')
-  .addEventListener('submit', signupFormHandler);

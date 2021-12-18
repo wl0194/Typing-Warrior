@@ -6,21 +6,27 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url("/Assets/bg.jpeg") no-repeat center;
+    background: url("../assets/bg.jpeg") no-repeat center;
     background-size: cover;
 }
 .hero::before {
     content:"";
     position: absolute; z-index: 1;
     top: 0; right: 0; bottom: 0; left: 0;
-    background-color: rgba(80, 80, 80, 0.3);
+    background-color: rgba(80, 80, 80, 0.1);
 }
 .login-form {
     position: relative; z-index: 2;
 }
 .login-form h1 {
     font-size: 32px;
-    color: rgb(0, 0, 0);
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.login-form h3 {
+    font-size: 32px;
+    color: #FFF;
     text-align: center;
     margin-bottom: 60px;
 }
@@ -73,4 +79,57 @@
     color: #999;
     text-decoration: none;
 
+}
+
+.header-form h4 {
+    display: flex;
+    justify-content: center;
+    transition-property: all;
+    margin-bottom:200px;
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    animation: text 3s 1;
+}
+
+.login-area {
+    background: #000000;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    font-size: 19px;
+    text-decoration: none;
+}
+a.btn {
+    color: #FFF !important;
+}
+.button {
+    z-index:2;
+    margin:40px;
+    font-size: 20px;
+    background-color: rgba(0, 0 , 0, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+@keyframes text {
+    0%{
+        color:black;
+        margin-bottom: -50px;
+    }
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
 }
