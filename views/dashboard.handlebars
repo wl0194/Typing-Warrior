@@ -17,61 +17,30 @@
         {{!-- replaced 'Word' with 'Phrase' for clarity, and increased paramater for text success from 5 seconds to 30 seconds. --}}
         <p class="lead">Type The Given Phrase Within
           <span class="text-success" id="seconds">30</span> Seconds:</p>
-        {{!-- <h2 class="display-2 mb-5" id="quoteDisplay">hello </h2> --}}
         <div class="typing-box" id="quoteDisplay"></div>
         <input type="text" id="quoteInput" class="form-control form-control-lg" placeholder="Start typing..." id="word-input" autofocus>
 
- {{!-- <div class="test-section">
-    <div class="typing-box" id="quoteDisplay"></div>
-    <textarea id="quoteInput" class="quote-input" autofocus></textarea>
-  </div> --}}
-        {{!-- display Game over --}}
+
+     
  <div class="timer" id="timer"></div>
         <h4 class="mt-3" id="message"></h4>
-
-        <!-- Time & Score Columns -->
-        {{!-- <div class="row mt-5">
-          <div class="col-md-6">
-            <h3><a href="/"><span id="restart">Restart</span></a></h3>
-            <h3>Time Left:
-              <span id="time">0</span>
-            </h3>
-          </div>
-          <div class="col-md-6">
-            <h3>Score:
-              <span id="score">0</span>
-            </h3>
-          </div>
-          <br><br>
-          <div class="col">
-            <h3>High Score:
-              <span id="highscore">0</span>
-            </h3>
-          </div>
-        </div> --}}
+      
 
         <!-- Instructions -->
         <div class="row mt-5">
           <div class="col-md-12">
             <div class="card card-body bg-secondary text-white">
               <h5>Instructions</h5>
-              {{!-- Again, replaced 'word' with 'phrase' and reworded instruction for clarity. --}}
-              <p>To score, type each phrase in the given time. To play again, correctly type the current phrase. The timer
-                will reset.</p>
+              <p>To score, type each phrase in a given time. To play again, correctly type the current phrase. If you would like to restart, you can simply click on the "RESTART" button.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div><a href="/dashboard"><span>Restart</span></a></div>
-
- 
-
-
- 
-
-
+  <div class="restart-section">
+    <a class="nav-link" href="/dashboard">RESTART</a>
+  </div>
 
 
 <script src="/js/homescript.js"></script>

@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-color: #346f34c9;
+    background-color: #acacacc9;
 }
 
 /* Welcome Heading */
@@ -113,6 +113,23 @@ body {
     margin: 0 auto;
     padding-top: 40px; 
     font-size: 30px;
+}
+.restart-section {
+    display: flex;
+    justify-content: center;
+    color:black;
+    font-size: 30px;
+    margin-top: 30px;
+
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-item {
+    display: flex;
+    margin-top: -100px;
 }
 /* background color to contrast quote from page */
 #quoteDisplay span {
