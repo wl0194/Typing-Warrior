@@ -1,5 +1,5 @@
 <div class="welcome-head">
-    <h2 class="me-4">WELCOME {{email}}</h2>
+    <h2 class="me-4">WELCOME TO TYPING WARRIOR! <br> {{{email}}} </h2>
     <svg width="450" height="4" viewBox="0 0 307 1" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M307 1H0V0H307V1Z" fill="black"></path>
     </svg>
@@ -11,31 +11,65 @@
         </li>
     </ul>
 </div>
-<div class="all-stats">
-    <p class="ms-3">ALL TIME STATS</p>
-    <div class="stat-block">
-        <p>AVERAGE WPM:</p>
-        <p>OVERALL ACCURACY:</p>
-        <p>TESTS TAKEN:</p>
+
+<div class="row">
+      <div class="col-md-6 mx-auto">
+        <p class="lead">Type The Given Word Within
+          <span class="text-success" id="seconds">5</span> Seconds:</p>
+        {{!-- <h2 class="display-2 mb-5" id="quoteDisplay">hello </h2> --}}
+        <div class="typing-box" id="quoteDisplay"></div>
+        <input type="text" id="quoteInput" class="form-control form-control-lg" placeholder="Start typing..." id="word-input" autofocus>
+
+ {{!-- <div class="test-section">
+    <div class="typing-box" id="quoteDisplay"></div>
+    <textarea id="quoteInput" class="quote-input" autofocus></textarea>
+  </div> --}}
+        {{!-- desplay Game over --}}
+ <div class="timer" id="timer"></div>
+        <h4 class="mt-3" id="message"></h4>
+
+        <!-- Time & Score Columns -->
+        {{!-- <div class="row mt-5">
+          <div class="col-md-6">
+            <h3><a href="/"><span id="restart">Restart</span></a></h3>
+            <h3>Time Left:
+              <span id="time">0</span>
+            </h3>
+          </div>
+          <div class="col-md-6">
+            <h3>Score:
+              <span id="score">0</span>
+            </h3>
+          </div>
+          <br><br>
+          <div class="col">
+            <h3>High Score:
+              <span id="highscore">0</span>
+            </h3>
+          </div>
+        </div> --}}
+
+        <!-- Instructions -->
+        <div class="row mt-5">
+          <div class="col-md-12">
+            <div class="card card-body bg-secondary text-white">
+              <h5>Instructions</h5>
+              <p>Type each word in the given amount of seconds to score. To play again, just type the current word. Your score
+                will reset</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-<div class="test-section">
-    <textarea class="typing-box"></textarea>
-    <aside class="active-box">
-        <div class="active-stats-head">
-            <h2>ACTIVE TEST SCORE</h2>
-        </div>
-        <div class="active-stats-body">
-            <ul>
-                <li>CURRENT WPM:</li>
-                <li>CURRENT ACCURACY:</li>
-            </ul>
-        </div>
-    </aside>
-</div>
-<div class="track-head">
-    <h2 class="me-4">TRACK YOUR STATS</h2>
-    <svg width="450" height="4" viewBox="0 0 307 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M307 1H0V0H307V1Z" fill="black" />
-    </svg>
-</div>
+  </div>
+  <div><a href="/dashboard"><span>Restart</span></a></div>
+
+ 
+
+
+ 
+
+
+
+
+<script src="/js/homescript.js"></script>
