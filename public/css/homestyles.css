@@ -1,6 +1,7 @@
+/* commented out text-transform: uppercase, otherwise CAPS LOCK is required for successful text entry. */
 * {
     font-family: Roboto;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 html {
@@ -12,7 +13,7 @@ body {
     background-color: #346f34c9;
 }
 
-/* Welcome Headding */
+/* Welcome Heading */
 .welcome-head {
     display: flex;
     align-items: center;
@@ -70,10 +71,11 @@ body {
     padding-top: 40px;
 }
 
+/* reduced height of typing box to increase visibility on larger screens. */
 .typing-box{
     width: 95%;
     max-width: 930px;
-    height: 360px;
+    height: 150px;
 }
 
 .active-box{
@@ -111,4 +113,17 @@ body {
     margin: 0 auto;
     padding-top: 40px; 
     font-size: 30px;
+}
+/* background color to contrast quote from page */
+#quoteDisplay span {
+    background-color: rgba(0, 0, 255, 0.2);
+}
+
+/* changing highlight color to indicate correct or incorrect entry */
+#quoteDisplay .correct {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+#quoteDisplay .incorrect {
+    background-color: rgba(255, 0, 0, 0.2);
 }
