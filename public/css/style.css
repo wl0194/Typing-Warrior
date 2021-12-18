@@ -60,15 +60,19 @@
 .btn-area {
     margin-top: 30px;
 }
+.btn-area button:hover {
+    background-color: #000000d3;
+}
 .btn-area button {
     width: 100%;
     height: 50px;
-    background: #000000;
+    background: rgba(0, 0 , 0, 0.5);
     color: #fff;
     font-size: 20px;
     border: none;
     border-radius: 25px;
     cursor: pointer;
+    transition: 0.5s;
 }
 .caption {
     margin-top: 20px;
@@ -116,7 +120,10 @@ a.btn {
     background-color: rgba(0, 0 , 0, 0.5);
     border: none;
     cursor: pointer;
-    transition: 0.8s;
+    transition: 0.5s;
+}
+.button:hover {
+    background:#000000d3;
 }
 
 @keyframes text {
