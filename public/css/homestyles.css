@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-color: #E3E3E3;
+    background-color: #346f34c9;
 }
 
 /* Welcome Headding */
@@ -21,6 +21,7 @@ body {
     margin: 0 auto;
     padding-top: 40px; 
     font-size: 30px;
+    color: rgba(255, 255, 255, 0.879);
 }
 
 .logout-section {
