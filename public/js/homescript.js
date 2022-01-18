@@ -2,7 +2,13 @@ const RANDOM_QUOTE_API_URL = 'https://api.quotable.io/random'
 const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput')
 const timerElement = document.getElementById('timer')
+const instBtn = document.getElementById('instructions')
+const instClose = document.getElementById('instruction-close')
+const instBox = document.getElementsByClassName('instructions')
 
+
+
+//Quote Function
 quoteInputElement.addEventListener('input', () => {
   const arrayQuote = quoteDisplayElement.querySelectorAll('span')
   const arrayValue = quoteInputElement.value.split('')
@@ -59,3 +65,13 @@ function getTimerTime() {
 }
 
 renderNewQuote()
+
+//Instruction Function
+
+instBtn.addEventListener('click', () => {
+  instBox[0].classList.remove('hide')
+})
+
+instClose.addEventListener('click', () => {
+  instBox[0].classList.add('hide')
+})
