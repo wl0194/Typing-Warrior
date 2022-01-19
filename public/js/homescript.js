@@ -5,6 +5,7 @@ const timerElement = document.getElementById('timer')
 const instBtn = document.getElementById('instructions')
 const instClose = document.getElementById('instruction-close')
 const instBox = document.getElementsByClassName('instructions')
+const buttons = document.querySelector('.button-section')
 
 
 
@@ -70,8 +71,10 @@ renderNewQuote()
 
 instBtn.addEventListener('click', () => {
   instBox[0].classList.remove('hide')
+  buttons.classList.add('hide')
 })
 
 instClose.addEventListener('click', () => {
   instBox[0].classList.add('hide')
+  buttons.classList.remove('hide')
 })
