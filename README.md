@@ -7,7 +7,7 @@ This application is an app that will allow user to test type and find out how fa
 Node.js, npm and Mysql must be installed to use this application.
 
 ## Demo
-* [screenshot](./public/assets/screenshot.jpeg)
+* [screenshot](./public/assets/screenshot.jpg)
 
 ## Links
 * [Heroku](https://afternoon-reaches-65972.herokuapp.com/)
