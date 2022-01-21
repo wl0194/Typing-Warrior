@@ -50,17 +50,17 @@ router.get("/login",  (req, res) => {
 router.get("/logout",  (req, res) => {
   
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("/login");
     return;
   }
  
-    res.render("/homepage");
+    res.render("/login");
 
 });
 
 router.get("/", (req, res) => {
   
-  res.render("homepage");
+  res.render("signup");
 });
 
 
