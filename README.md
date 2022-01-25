@@ -15,4 +15,5 @@ Node.js, npm and Mysql must be installed to use this application.
 
 ## License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  ![License Badge](https://img.shields.io/badge/License-MIT-yellow.svg)
+  ![Top Language](https://img.shields.io/github/languages/top/wl0194/Workout-tracker)
